@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="display: block;text-align: center;">survey form</h1>
+    
+    <form id="form" action="submit">
+        <div class="names">
+            <label id="nm">first name</label>
+            <input type="text" id="fname" placeholder="Enter first name" required><br>
+            <label id="namevalid"></label>
+            <label id="nm">last name</label>
+            <input type="text" id="lname" placeholder="Enter first name" required><br>
+        <label id="nm">date of birth</label> 
+        <input type="date" id="dateofbirth" required><br>
+        <label id="nm">country</label>
+        <select name="country" id="country" required>
+            <option value="india">india</option>
+            <option value="usa">usa</option>
+            <option value="uk">uk</option>
+            <option value="china">china</option>
+            <option value="japan">japan</option>
+        </select><br>
+        <label id="nm">select gender</label><br>
+        <label id="gen">male</label><input type="checkbox" name="male" id="gender">
+        <label id="gen">female</label><input type="checkbox" name="female" id="gender"><br>
+        <label id="nm">profession</label>
+        <select name="profession" id="profession" required>
+            <option value="student">student</option>
+            <option value="employee">employee</option>
+            <option value="business">business</option>
+            <option value="others">others</option>
+        </select><br>
+        <label id="nm">email</label>
+        <input type="email" placeholder="Enter email" id="email" required><br>
+        <label id="nm">phone number</label>
+        <input type="number" placeholder="Enter phone number" id="number" required><br>
+        <input type="submit" id="submit" value="submit">
+        <input type="button" value="reset" id="reset" onclick="closePopup()">
+        </div>
+    </form>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popup-content">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
